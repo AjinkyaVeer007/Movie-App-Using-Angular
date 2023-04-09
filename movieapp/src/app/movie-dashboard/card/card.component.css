@@ -1,0 +1,52 @@
+img{
+    width: 15vw;
+    object-fit: contain;
+    border-radius: 20px;
+}
+.card{
+    background-color: #000000;
+    width: 70%;
+    padding: 15px;
+    margin: 1vw;
+    border-radius: 1rem;
+    display: flex;
+    gap: 10px;
+    color: white;
+    align-items: start;
+    justify-content: center;
+    border: #fff solid 1px;
+}
+
+.card:hover{    
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.details{
+    padding: 10px;    
+    font-family: "Poppins";
+}
+
+.details>h1{
+    margin-bottom: 20px;
+}
+
+.details>h4{
+    margin-bottom: 40px;
+}
+
+span{
+    color: darkorange;
+}
+
+@media screen and (max-width : 980px){
+    .card{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+        padding: 8px;
+    }
+    img{
+        width: 35vw;
+    }
+}

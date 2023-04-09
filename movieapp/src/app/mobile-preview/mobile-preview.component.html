@@ -1,0 +1,13 @@
+<a routerLink="/">Back</a>
+<div class="preview" *ngIf="previewCardData">
+    <iframe class="frame" [src]="previewCardData.youtube_embed_url | safehtml" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="main-details">
+            <h1>{{previewCardData.name | upper}}</h1>
+            <h4><span>Description - </span>{{previewCardData.description}}</h4>
+            <div class="details">
+                <h4><span>Language - </span>{{previewCardData.language}}</h4>
+                <h4><span>Type - </span>{{previewCardData.type}}</h4>
+                <h3 class="rating"><span>Rating - </span>{{previewCardData.rating}}/10</h3>
+            </div>
+        </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="main-dashboard">
+<nav>
+    <h1>Movies App</h1>
+    <div class="submit">    
+      <input [formControl]="search"/>
+      <button (click)="onSubmit()" class="search">Search</button>
+    </div>
+    <h4><a href="https://www.linkedin.com/in/ajinkya-veer-0ba100238/" target="_blank">Contact Us</a></h4>
+  </nav>
+<div class="dashboard">
+  <div>
+    <div class="btn-grp">
+    <div *ngFor="let button of uniqueLanguages; let i = index">
+      <button class="language-button" (click)="filterLaguage(button)">{{ button }}</button>
+    </div>
+  </div>
+  <div class="card">
+    <app-card
+      *ngFor="let movieCard of filteredMoviesData; let i = index"
+      [card]="movieCard"
+      (click)="onCardClick(movieCard)"
+    ></app-card>
+  </div>
+  </div>
+  <app-preview [previewCard]="previewCardData"></app-preview>
+</div>
+
+</div>
